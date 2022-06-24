@@ -11,9 +11,11 @@ function ColorInput(props) {
       props.onColorChange('red');
       return;
     }
-    const r = parseInt(hex.slice(1, 3), 16);
-    const g = parseInt(hex.slice(3, 5), 16);
-    const b = parseInt(hex.slice(5, 7), 16);
+
+    const r = parseInt(value.slice(1, 3), 16);
+    const g = parseInt(value.slice(3, 5), 16);
+    const b = parseInt(value.slice(5, 7), 16);
+
     if (isNaN(r) || isNaN(g) || isNaN(b)) {
       setRgb('Ошибка');
       props.onColorChange('red');
